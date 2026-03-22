@@ -1,0 +1,358 @@
+export interface ProductColor {
+  name: string;
+  hex: string;
+}
+
+export interface Product {
+  id: number;
+  name: string;
+  category: string;
+  categorySlug: string;
+  price: number;
+  description: string;
+  emoji: string;
+  colors: ProductColor[];
+  tags: string[];
+}
+
+export const categories = [
+  { name: 'Amigurumi', slug: 'amigurumi', emoji: '🧶', description: 'Bonequinhos de crochê feitos com muito carinho' },
+  { name: 'Peças de Biscuit', slug: 'biscuit', emoji: '🎨', description: 'Peças artesanais em biscuit com acabamento perfeito' },
+  { name: 'Adesivos', slug: 'adesivos', emoji: '✨', description: 'Adesivos fofos e personalizados para decorar tudo' },
+  { name: 'Bottoms & Pins', slug: 'bottoms', emoji: '📌', description: 'Pins e bottoms estilosos para suas roupas' },
+  { name: 'Miçangas', slug: 'micangas', emoji: '📿', description: 'Pulseiras e brincos artesanais de miçangas' },
+  { name: 'Crochê Mesa', slug: 'croche-mesa', emoji: '🏡', description: 'Toalhas e peças de crochê para decorar sua mesa' },
+];
+
+export const products: Product[] = [
+  // Amigurumi
+  {
+    id: 1,
+    name: 'Amigurumi Vaquinha',
+    category: 'Amigurumi',
+    categorySlug: 'amigurumi',
+    price: 65.00,
+    description: 'Vaquinha de crochê super fofa, feita com linha de algodão e enchimento antialérgico. Perfeita para decoração ou presente.',
+    emoji: '🐄',
+    colors: [
+      { name: 'Branco e Preto', hex: '#F5F5F5' },
+      { name: 'Marrom', hex: '#8B4513' },
+      { name: 'Rosa', hex: '#FFB6C1' },
+      { name: 'Caramelo', hex: '#D2691E' },
+    ],
+    tags: ['fofo', 'presente', 'decoração'],
+  },
+  {
+    id: 2,
+    name: 'Amigurumi Coelhinho',
+    category: 'Amigurumi',
+    categorySlug: 'amigurumi',
+    price: 55.00,
+    description: 'Coelhinho de crochê com orelhinhas longas, ideal para presentear bebês e crianças.',
+    emoji: '🐰',
+    colors: [
+      { name: 'Branco', hex: '#FFFFFF' },
+      { name: 'Rosa Bebê', hex: '#FFB6C1' },
+      { name: 'Lilás', hex: '#DDA0DD' },
+      { name: 'Bege', hex: '#F5DEB3' },
+    ],
+    tags: ['bebê', 'presente', 'fofo'],
+  },
+  {
+    id: 3,
+    name: 'Amigurumi Ursinho',
+    category: 'Amigurumi',
+    categorySlug: 'amigurumi',
+    price: 70.00,
+    description: 'Ursinho de crochê com lacinho, super macio e aconchegante. Feito à mão com muito amor.',
+    emoji: '🧸',
+    colors: [
+      { name: 'Marrom Claro', hex: '#D2B48C' },
+      { name: 'Bege', hex: '#F5DEB3' },
+      { name: 'Cinza', hex: '#C0C0C0' },
+      { name: 'Rosa', hex: '#FF69B4' },
+    ],
+    tags: ['presente', 'decoração', 'fofo'],
+  },
+  {
+    id: 4,
+    name: 'Amigurumi Gatinho',
+    category: 'Amigurumi',
+    categorySlug: 'amigurumi',
+    price: 60.00,
+    description: 'Gatinho de crochê com olhinhos bordados e bigodinho. Um charme para qualquer cantinho.',
+    emoji: '🐱',
+    colors: [
+      { name: 'Cinza', hex: '#808080' },
+      { name: 'Laranja', hex: '#FFA500' },
+      { name: 'Preto', hex: '#2C2C2C' },
+      { name: 'Branco', hex: '#FFFFFF' },
+    ],
+    tags: ['fofo', 'decoração', 'gato'],
+  },
+  {
+    id: 5,
+    name: 'Amigurumi Florzinha',
+    category: 'Amigurumi',
+    categorySlug: 'amigurumi',
+    price: 35.00,
+    description: 'Florzinha sorridente de crochê, perfeita para chaveiro ou decoração de bolsa.',
+    emoji: '🌸',
+    colors: [
+      { name: 'Rosa', hex: '#FF69B4' },
+      { name: 'Amarelo', hex: '#FFD700' },
+      { name: 'Lilás', hex: '#DDA0DD' },
+      { name: 'Vermelho', hex: '#FF4255' },
+    ],
+    tags: ['chaveiro', 'acessório', 'fofo'],
+  },
+  // Biscuit
+  {
+    id: 6,
+    name: 'Brincos de Biscuit - Flores',
+    category: 'Peças de Biscuit',
+    categorySlug: 'biscuit',
+    price: 25.00,
+    description: 'Brincos artesanais de biscuit em formato de flor, leves e delicados. Base em aço inox antialérgico.',
+    emoji: '🌺',
+    colors: [
+      { name: 'Rosa', hex: '#FF69B4' },
+      { name: 'Branco', hex: '#FFFFFF' },
+      { name: 'Vermelho', hex: '#FF4255' },
+      { name: 'Amarelo', hex: '#FFD700' },
+    ],
+    tags: ['brinco', 'acessório', 'delicado'],
+  },
+  {
+    id: 7,
+    name: 'Incensário de Biscuit',
+    category: 'Peças de Biscuit',
+    categorySlug: 'biscuit',
+    price: 45.00,
+    description: 'Incensário artesanal de biscuit com design exclusivo. Peça decorativa e funcional.',
+    emoji: '🕯️',
+    colors: [
+      { name: 'Terracota', hex: '#E2725B' },
+      { name: 'Branco', hex: '#FFFFFF' },
+      { name: 'Dourado', hex: '#DAA520' },
+      { name: 'Verde Sage', hex: '#9CAF88' },
+    ],
+    tags: ['decoração', 'incenso', 'casa'],
+  },
+  {
+    id: 8,
+    name: 'Peça Decorativa Biscuit',
+    category: 'Peças de Biscuit',
+    categorySlug: 'biscuit',
+    price: 40.00,
+    description: 'Mini escultura decorativa em biscuit, perfeita para enfeitar prateleiras e mesas.',
+    emoji: '🎭',
+    colors: [
+      { name: 'Colorido', hex: '#FF6B6B' },
+      { name: 'Pastel', hex: '#FFB5E8' },
+      { name: 'Neutro', hex: '#D4C5A9' },
+    ],
+    tags: ['decoração', 'presente', 'artesanal'],
+  },
+  {
+    id: 9,
+    name: 'Brincos Frutas Biscuit',
+    category: 'Peças de Biscuit',
+    categorySlug: 'biscuit',
+    price: 28.00,
+    description: 'Brincos em formato de frutinhas em biscuit. Super fofos e chamativos!',
+    emoji: '🍓',
+    colors: [
+      { name: 'Morango', hex: '#FF3B3B' },
+      { name: 'Laranja', hex: '#FFA500' },
+      { name: 'Uva', hex: '#6B3FA0' },
+      { name: 'Limão', hex: '#32CD32' },
+    ],
+    tags: ['brinco', 'divertido', 'colorido'],
+  },
+  // Adesivos
+  {
+    id: 10,
+    name: 'Kit Adesivos Fofos',
+    category: 'Adesivos',
+    categorySlug: 'adesivos',
+    price: 12.00,
+    description: 'Kit com 10 adesivos fofos ilustrados à mão. Perfeitos para notebook, celular e caderno.',
+    emoji: '🌟',
+    colors: [
+      { name: 'Colorido', hex: '#FF6B6B' },
+      { name: 'Pastel', hex: '#FFB5E8' },
+      { name: 'Monocromático', hex: '#333333' },
+    ],
+    tags: ['adesivo', 'decoração', 'notebook'],
+  },
+  {
+    id: 11,
+    name: 'Adesivos Personalizados',
+    category: 'Adesivos',
+    categorySlug: 'adesivos',
+    price: 18.00,
+    description: 'Adesivos com desenhos personalizados sob encomenda. Envie sua ideia e a gente cria!',
+    emoji: '🎨',
+    colors: [
+      { name: 'A sua escolha', hex: '#FF4255' },
+    ],
+    tags: ['personalizado', 'exclusivo', 'criativo'],
+  },
+  {
+    id: 12,
+    name: 'Adesivos Frases Motivacionais',
+    category: 'Adesivos',
+    categorySlug: 'adesivos',
+    price: 10.00,
+    description: 'Kit com 8 adesivos com frases fofas e motivacionais em lettering artístico.',
+    emoji: '💕',
+    colors: [
+      { name: 'Rosa e Vermelho', hex: '#FF4255' },
+      { name: 'Roxo e Lilás', hex: '#9B59B6' },
+      { name: 'Azul e Verde', hex: '#3498DB' },
+    ],
+    tags: ['frases', 'motivacional', 'lettering'],
+  },
+  // Bottoms
+  {
+    id: 13,
+    name: 'Bottom Coração',
+    category: 'Bottoms & Pins',
+    categorySlug: 'bottoms',
+    price: 8.00,
+    description: 'Bottom estiloso em formato de coração com acabamento brilhante. Perfeito para jaquetas e mochilas.',
+    emoji: '❤️',
+    colors: [
+      { name: 'Vermelho', hex: '#FF4255' },
+      { name: 'Rosa', hex: '#FF69B4' },
+      { name: 'Roxo', hex: '#9B59B6' },
+    ],
+    tags: ['bottom', 'acessório', 'moda'],
+  },
+  {
+    id: 14,
+    name: 'Bottom Gatinho',
+    category: 'Bottoms & Pins',
+    categorySlug: 'bottoms',
+    price: 8.00,
+    description: 'Bottom fofo de gatinho, ideal para quem ama gatos! Material resistente e duradouro.',
+    emoji: '😺',
+    colors: [
+      { name: 'Preto e Branco', hex: '#333333' },
+      { name: 'Laranja', hex: '#FFA500' },
+      { name: 'Rosa', hex: '#FFB6C1' },
+    ],
+    tags: ['bottom', 'gato', 'fofo'],
+  },
+  {
+    id: 15,
+    name: 'Kit Bottoms Variados',
+    category: 'Bottoms & Pins',
+    categorySlug: 'bottoms',
+    price: 20.00,
+    description: 'Kit com 4 bottoms temáticos variados. Surpresa especial em cada kit!',
+    emoji: '🎁',
+    colors: [
+      { name: 'Mix Colorido', hex: '#FF6B6B' },
+      { name: 'Mix Pastel', hex: '#FFB5E8' },
+    ],
+    tags: ['kit', 'surpresa', 'variado'],
+  },
+  // Miçangas
+  {
+    id: 16,
+    name: 'Pulseira de Miçangas',
+    category: 'Miçangas',
+    categorySlug: 'micangas',
+    price: 15.00,
+    description: 'Pulseira artesanal de miçangas com padrão trançado. Cada peça é única!',
+    emoji: '📿',
+    colors: [
+      { name: 'Vermelho e Dourado', hex: '#FF4255' },
+      { name: 'Azul e Branco', hex: '#4169E1' },
+      { name: 'Verde e Rosa', hex: '#32CD32' },
+      { name: 'Colorido', hex: '#FF6B6B' },
+    ],
+    tags: ['pulseira', 'acessório', 'miçanga'],
+  },
+  {
+    id: 17,
+    name: 'Brincos de Miçangas',
+    category: 'Miçangas',
+    categorySlug: 'micangas',
+    price: 18.00,
+    description: 'Brincos delicados de miçangas, feitos à mão com base antialérgica.',
+    emoji: '💎',
+    colors: [
+      { name: 'Rosa e Branco', hex: '#FFB6C1' },
+      { name: 'Vermelho e Preto', hex: '#FF4255' },
+      { name: 'Dourado', hex: '#DAA520' },
+      { name: 'Multicolor', hex: '#FF69B4' },
+    ],
+    tags: ['brinco', 'delicado', 'miçanga'],
+  },
+  {
+    id: 18,
+    name: 'Conjunto Miçangas',
+    category: 'Miçangas',
+    categorySlug: 'micangas',
+    price: 30.00,
+    description: 'Conjunto de pulseira + brinco de miçangas combinando. Presente perfeito!',
+    emoji: '🎀',
+    colors: [
+      { name: 'Rosa', hex: '#FF69B4' },
+      { name: 'Vermelho', hex: '#FF4255' },
+      { name: 'Lilás', hex: '#DDA0DD' },
+      { name: 'Turquesa', hex: '#40E0D0' },
+    ],
+    tags: ['conjunto', 'presente', 'combinação'],
+  },
+  // Crochê Mesa
+  {
+    id: 19,
+    name: 'Toalha de Mesa Crochê',
+    category: 'Crochê Mesa',
+    categorySlug: 'croche-mesa',
+    price: 120.00,
+    description: 'Toalha de mesa em crochê com padrão floral delicado. Peça artesanal que traz charme à sua mesa.',
+    emoji: '🏡',
+    colors: [
+      { name: 'Branco', hex: '#FFFFFF' },
+      { name: 'Cru', hex: '#F5F5DC' },
+      { name: 'Rosa Claro', hex: '#FFE4E1' },
+    ],
+    tags: ['mesa', 'decoração', 'casa'],
+  },
+  {
+    id: 20,
+    name: 'Jogo Americano Crochê',
+    category: 'Crochê Mesa',
+    categorySlug: 'croche-mesa',
+    price: 80.00,
+    description: 'Kit com 4 jogos americanos de crochê. Elegante e artesanal para sua mesa.',
+    emoji: '🍽️',
+    colors: [
+      { name: 'Branco', hex: '#FFFFFF' },
+      { name: 'Bege', hex: '#F5DEB3' },
+      { name: 'Rosa', hex: '#FFB6C1' },
+      { name: 'Terracota', hex: '#E2725B' },
+    ],
+    tags: ['mesa', 'jogo americano', 'kit'],
+  },
+  {
+    id: 21,
+    name: 'Porta Copos Crochê',
+    category: 'Crochê Mesa',
+    categorySlug: 'croche-mesa',
+    price: 35.00,
+    description: 'Kit com 6 porta copos de crochê em formato de flor. Protege e decora!',
+    emoji: '🌼',
+    colors: [
+      { name: 'Colorido', hex: '#FF6B6B' },
+      { name: 'Pastel', hex: '#FFB5E8' },
+      { name: 'Neutro', hex: '#D4C5A9' },
+    ],
+    tags: ['porta copos', 'flor', 'prático'],
+  },
+];
