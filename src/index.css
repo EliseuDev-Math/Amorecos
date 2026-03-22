@@ -4,12 +4,12 @@
 :root {
   --primary: #FF4255;
   --primary-light: #FF6B7A;
-  --primary-lighter: #FF4255;
+  --primary-lighter: #FFE8EA;
   --primary-dark: #E63A4C;
   --accent: #9B1200;
   --accent-light: #B91E0C;
   --accent-dark: #7A0E00;
-  --bg: #FFFFFF;
+  --bg: #FF4255;
   --bg-warm: #FFF9F7;
   --bg-card: #FFFFFF;
   --text-primary: #1A1A2E;
