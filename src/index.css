@@ -2,10 +2,9 @@
 
 /* ===== CSS Variables ===== */
 :root {
-  --primary: #9B1200;
-  --primary-light: #B91E0C;
-  --primary-dark: #7A0E00;
-  --primary-dark: #E63A4C;
+    --primary: #FF4255;
+  --primary-light: #FF6B7A;
+  --primary-lighter: #ff5c6a;
   --accent: #9B1200;
   --accent-light: #B91E0C;
   --accent-dark: #7A0E00;
